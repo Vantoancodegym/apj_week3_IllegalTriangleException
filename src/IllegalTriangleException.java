@@ -15,7 +15,7 @@ public class IllegalTriangleException {
         }
     }
     public static void checkLegalTriangle(int side1, int side2,int side3) throws Exception{
-        boolean isLegalTriangle=(side1+side2)>side3&&(side1+side3)>side2&&(side2+side3)>side1;
+        boolean isLegalTriangle=(side1+side2)>side3||(side1+side3)>side2||(side2+side3)>side1;
         if (!isLegalTriangle) throw new Exception("there is illegal triangle");
     }
 }
